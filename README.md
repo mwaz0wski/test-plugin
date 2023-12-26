@@ -24,11 +24,11 @@ To include this plugin in your Maven project, modify your `pom.xml` and add the 
                 <execution>
                     <id>default-hello-world</id>
                     <goals>
-                        <goal>hello-world</goal> <!--Includes the goal that logs the "Hello World!" message-->
+                        <goal>hello-world</goal> <!--Includes the goal that logs the "Hello, World!" message-->
                     </goals>
                 </execution>
                 <configuration>
-                    <name>Mwaz0wski</name> <!--If you set a value in the parameter name, instead of "Hello World!", it will be logged "Hello ${name}!"-->
+                    <name>Mwaz0wski</name> <!--If you set a value in the parameter name, or you set the parameter when running the maven command with -Dname, instead of "Hello, World!", it will be logged "Hello, ${name}!"-->
                 </configuration>
             </executions>
         </plugin>

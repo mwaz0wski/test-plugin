@@ -22,14 +22,13 @@ To include this plugin in your Maven project, modify your `pom.xml` and add the 
             <version>0.0.1-SNAPSHOT</version>
             <executions>
                 <execution>
-                    <id>default-hello-world</id>
                     <goals>
                         <goal>hello-world</goal> <!--Includes the goal that logs the "Hello, World!" message-->
                     </goals>
+                    <configuration>
+                        <name>Mwaz0wski</name> <!--If you set a value in the parameter name, or you set the parameter when running the maven command with -Dname, instead of "Hello, World!", it will be logged "Hello, ${name}!"-->
+                    </configuration>
                 </execution>
-                <configuration>
-                    <name>Mwaz0wski</name> <!--If you set a value in the parameter name, or you set the parameter when running the maven command with -Dname, instead of "Hello, World!", it will be logged "Hello, ${name}!"-->
-                </configuration>
             </executions>
         </plugin>
     </plugins>
@@ -46,11 +45,11 @@ To include this plugin in your Maven project, modify your `pom.xml` and add the 
                     <goals>
                         <goal>count-dependencies</goal>
                     </goals>
+                    <configuration>
+                        <scope>provided</scope> <!--If you set a scope in the parameter of the same name, the dependencies checked will be the ones
+                                                      declared for that scope in the pom.xml. By default the scope checked is compile-->
+                    </configuration>
                 </execution>
-                <configuration>
-                    <scope>provided</scope> <!--If you set a scope in the parameter of the same name, the dependencies checked will be the ones
-                                                  declared for that scope in the pom.xml. By default the scope checked is compile-->
-                </configuration>
             </executions>
         </plugin>
     </plugins>

@@ -5,7 +5,7 @@
 This Maven plugin provides two distinct goals:
 
 - **Hello World Goal**: Logs a "Hello World!" message in the Maven output.
-- **Dependency Count Goal**: Determines and displays the number of dependencies found in a project's `pom.xml` for a given scope, by default the scope is "compile", but it can be changed.
+- **Dependency Count Goal**: Determines and displays the number of dependencies found in a project's `pom.xml` for a given scope, by default the scope is "compile", but it can be changed with the maven parameter "scope".
 
 ## Installation
 
